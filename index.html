@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hans Kevin Austin Habeahan — Portofolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar__brand">Portofolio Mahasiswa</div>
+        <button class="navbar__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="navbar__links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero__text">
+                <h1 class="hero__name">Hans Kevin<br>Austin Habeahan</h1>
+                <p class="hero__desc">
+                    Mahasiswa USU semester 3 Kelas A.
+                </p>
+                <div class="hero__cta">
+                    <a href="#projects" class="btn btn--primary">Lihat proyek</a>
+                    <a href="#contact" class="btn btn--ghost">Hubungi saya</a>
+                </div>
+            </div>
+
+            <div class="hero__photo">
+                <img src="./assets/chicken.jpeg" alt="Foto ayam kesukaan Hans">
+                <p class="hero__photo-caption">Saya suka Ayam</p>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <p class="section__label">about me</p>
+            <div class="about__grid">
+                <div class="about__text">
+                    <h2>Tentang Saya (About Me)</h2>
+                    <p>
+                        Saya Hans Kevin Austin Habeahan, mahasiswa Ilmu Komputer Fasilkom-TI, Kelas A.
+                        Semester ini saya mengambil mata kuliah Praktikum Basis Data, Praktikum Struktur
+                        Data, Praktikum Pemrograman Web, Wirausaha Digital, Struktur Data, Pemrograman Web,
+                        Basis Data, IELTS Preparation, Kecerdasan Buatan, dan Catur.
+                    </p>
+                    <p>
+                        Di luar kelas, hobi saya tidur dan bermain game. Saya suka juga dengan ayam.
+                    </p>
+                </div>
+                <dl class="about__facts">
+                    <div>
+                        <dt>NIM</dt>
+                        <dd>251401136</dd>
+                    </div>
+                    <div>
+                        <dt>Program Studi</dt>
+                        <dd>Ilmu Komputer</dd>
+                    </div>
+                    <div>
+                        <dt>Fakultas</dt>
+                        <dd>Fakultas Ilmu Komputer dan Teknologi Informasi, USU</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <p class="section__label">skills</p>
+            <h2>Kemampuan (Skills)</h2>
+            <div class="skills__grid">
+                <div class="skills__group">
+                    <h3>Bahasa Pemrograman</h3>
+                    <ul class="tag-list">
+                        <li>C++</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="skills__group">
+                    <h3>Framework &amp; Tools</h3>
+                    <ul class="tag-list">
+                        <li>Git &amp; GitHub</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <p class="section__label">projects</p>
+            <h2>Proyek (Projects)</h2>
+            <div class="projects__grid">
+                <article class="project-card">
+                    <p class="project-card__meta">/* proyek kelompok */</p>
+                    <h3>USILKOMP — Roblox Developer Studio</h3>
+                    <p>
+                        Proyek kelompok mengembangkan map custom dan aset 3D untuk Roblox, dikerjakan
+                        bersama tim.
+                    </p>
+                    <ul class="tag-list tag-list--small">
+                        <li>Roblox Studio</li>
+                        <li>3D Design</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <p class="section__label">contact</p>
+            <h2>Kontak (contact)</h2>
+            <div class="contact__links">
+                <a href="mailto:hanshabeahan7@gmail.com">email: <span>hanshabeahan7@gmail.com</span></a>
+                <a href="https://github.com/hanskev3" target="_blank" rel="noopener">github: <span>hanskev3</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Hans Kevin Austin Habeahan — 251401136</p>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('is-open');
+            navToggle.setAttribute('aria-expanded', isOpen);
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('is-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+
+</html>
